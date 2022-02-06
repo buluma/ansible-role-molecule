@@ -31,7 +31,7 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
     - role: buluma.bootstrap
     - role: buluma.buildtools
     - role: buluma.epel
-    - role: buluma.python_pip```
+    - role: buluma.python_pip
 
 
 ## [Role Variables](#role-variables)
