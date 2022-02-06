@@ -4,7 +4,7 @@ Install Molecule on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/buluma/ansible-role-molecule/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-molecule/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-molecule/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-molecule)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/molecule)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/molecule)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-molecule.svg)](https://github.com/buluma/ansible-role-molecule/releases/)|
+|[![github](https://github.com/buluma/ansible-role-molecule/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-molecule/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-molecule/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-molecule)|[![quality](https://img.shields.io/ansible/quality/57954)](https://galaxy.ansible.com/buluma/molecule)|[![downloads](https://img.shields.io/ansible/role/d/57954)](https://galaxy.ansible.com/buluma/molecule)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-molecule.svg)](https://github.com/buluma/ansible-role-molecule/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -17,7 +17,8 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
   gather_facts: yes
 
   roles:
-    - role: buluma.molecule```
+    - role: buluma.molecule
+```
 
 The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
 ```yaml
@@ -32,6 +33,7 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
     - role: buluma.buildtools
     - role: buluma.epel
     - role: buluma.python_pip
+```
 
 
 ## [Role Variables](#role-variables)
