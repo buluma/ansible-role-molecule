@@ -1,5 +1,5 @@
 ---
-image: "buluma/github-action-molecule:4.0.5"
+image: "buluma/github-action-molecule:4.0.6"
 
 services:
   - docker:dind
@@ -29,7 +29,7 @@ molecule:
       - image: "fedora-systemd"
         tag: "rawhide"
       - image: "docker-ubuntu-systemd"
-        tag: "latest"
+        tag: "focal"
 
 testing:
   script:
@@ -52,7 +52,7 @@ testing:
       - image: "fedora-systemd"
         tag: "rawhide"
       - image: "docker-ubuntu-systemd"
-        tag: "latest"
+        tag: "focal"
 
 role_testing:
   script:
@@ -75,7 +75,7 @@ role_testing:
       - image: "fedora-systemd"
         tag: "rawhide"
       - image: "docker-ubuntu-systemd"
-        tag: "latest"
+        tag: "focal"
 
 galaxy:
   script:
@@ -100,4 +100,4 @@ role_testing_live:
       - image: "fedora-systemd"
         tag: "rawhide"
       - image: "docker-ubuntu-systemd"
-        tag: "latest"
+        tag: "focal"
