@@ -16,8 +16,8 @@ molecule:
   retry: 1
   parallel:
     matrix:
-      - image: "enterpriselinux"
-        tag: "latest"
+      # - image: "enterpriselinux"
+      #  tag: "latest"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
@@ -39,8 +39,8 @@ testing:
   retry: 1
   parallel:
     matrix:
-      - image: "enterpriselinux"
-        tag: "latest"
+      # - image: "enterpriselinux"
+      #  tag: "latest"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
@@ -62,8 +62,8 @@ role_testing:
   retry: 1
   parallel:
     matrix:
-      - image: "enterpriselinux"
-        tag: "latest"
+      # - image: "enterpriselinux"
+      #  tag: "latest"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
@@ -87,8 +87,8 @@ role_testing_live:
   retry: 1
   parallel:
     matrix:
-      - image: "enterpriselinux"
-        tag: "latest"
+      # - image: "enterpriselinux"
+      #  tag: "latest"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
