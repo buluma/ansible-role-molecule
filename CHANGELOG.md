@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-molecule/compare/1.0.7...HEAD)
 
+**Closed issues:**
+
+- check when fixed [\#1](https://github.com/buluma/ansible-role-molecule/issues/1)
+
 **Merged pull requests:**
 
 - Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.4 to 1.0.5 [\#4](https://github.com/buluma/ansible-role-molecule/pull/4) ([dependabot[bot]](https://github.com/apps/dependabot))
