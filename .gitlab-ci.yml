@@ -1,36 +1,31 @@
 ---
-image: "buluma/github-action-molecule:4.0.9"
-
-services:
-  - docker:dind
+image: "buluma/github-action-molecule:5.0.0"
 
 variables:
-  DOCKER_HOST: "tcp://docker:2375"
   PY_COLORS: 1
 
 molecule:
   stage: build
   allow_failure: true
   script:
-    - if [ -f tox.ini ] ; then tox ; fi
-    - if [ ! -f tox.ini ] ; then molecule test ; fi
+    - molecule test
   rules:
     - if: $CI_COMMIT_REF_NAME == "main"
   retry: 1
   parallel:
     matrix:
       - image: "enterpriselinux"
-        tag: "latest"
+        tag: "8"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
         tag: "buster"
       - image: "fedora-systemd"
-        tag: "34"
-      - image: "fedora-systemd"
         tag: "35"
       - image: "fedora-systemd"
         tag: "latest"
+      - image: "fedora-systemd"
+        tag: "rawhide"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
 
@@ -46,16 +41,16 @@ testing:
   parallel:
     matrix:
       - image: "enterpriselinux"
-        tag: "latest"
+        tag: "8"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
         tag: "buster"
       - image: "fedora-systemd"
-        tag: "34"
-      - image: "fedora-systemd"
         tag: "35"
       - image: "fedora-systemd"
         tag: "latest"
+      - image: "fedora-systemd"
+        tag: "rawhide"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
