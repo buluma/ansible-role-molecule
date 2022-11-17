@@ -17,7 +17,7 @@ molecule:
       - image: "docker-centos8-ansible"
         tag: "latest"
       - image: "debian"
-        tag: "latest"
+        tag: "10"
       - image: "debian"
         tag: "buster"
       - image: "fedora"
