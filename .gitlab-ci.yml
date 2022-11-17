@@ -6,10 +6,11 @@ variables:
 
 molecule:
   stage: build
+  needs: []
   allow_failure: true
   script:
     - whoami
-    - sudo molecule -v test
+    - molecule -v test
   rules:
     - if: $CI_COMMIT_REF_NAME == "main"
   retry: 1
