@@ -10,7 +10,7 @@ molecule:
   allow_failure: true
   script:
     - whoami
-    - molecule -v test
+    - molecule test
   rules:
     - if: $CI_COMMIT_REF_NAME == "main"
   retry: 1
