@@ -14,20 +14,18 @@ molecule:
   retry: 1
   parallel:
     matrix:
-      - image: "enterpriselinux"
-        tag: "8"
-      - image: "debian-systemd"
+      - image: "docker-centos8-ansible"
         tag: "latest"
-      - image: "debian-systemd"
+      - image: "debian"
+        tag: "latest"
+      - image: "debian"
         tag: "buster"
-      - image: "fedora-systemd"
-        tag: "35"
-      - image: "fedora-systemd"
+      - image: "fedora"
         tag: "latest"
-      - image: "fedora-systemd"
-        tag: "rawhide"
-      - image: "docker-ubuntu-systemd"
+      - image: "ubuntu"
         tag: "focal"
+      - image: "ubuntu"
+        tag: "jammy"
 
 testing:
   stage: test
