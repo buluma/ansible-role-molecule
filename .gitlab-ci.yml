@@ -8,7 +8,8 @@ molecule:
   stage: build
   allow_failure: true
   script:
-    - molecule -v test
+    - whoami
+    - sudo molecule -v test
   rules:
     - if: $CI_COMMIT_REF_NAME == "main"
   retry: 1
