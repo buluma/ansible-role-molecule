@@ -30,6 +30,10 @@ molecule:
         tag: "bionic"
       - image: "kali"
         tag: "latest"
+      - image: "alpine-openrc"
+        tag: "latest"
+      - image: "docker-opensuse-systemd"
+        tag: "latest"
 
 galaxy:
   script:

@@ -58,6 +58,10 @@ jobs:
             tag: "bionic"
           - image: "kali"
             tag: "latest"
+          - image: "alpine-openrc"
+            tag: "latest"
+          - image: "docker-opensuse-systemd"
+            tag: "latest"
     steps:
       - name: checkout
         uses: actions/checkout@v3

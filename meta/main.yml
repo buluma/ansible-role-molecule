@@ -23,6 +23,12 @@ galaxy_info:
     - name: Kali
       versions:
         - all
+    - name: Alpine
+      versions:
+        - all
+    - name: opensuse
+      versions:
+        - all
 
   galaxy_tags:
     - molecule
