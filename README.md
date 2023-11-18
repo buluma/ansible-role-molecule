@@ -1,10 +1,10 @@
-# [molecule](#molecule)
+# [Ansible role molecule](#molecule)
 
 Install Molecule on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-molecule/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-molecule/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-molecule/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-molecule)|[![quality](https://img.shields.io/ansible/quality/57954)](https://galaxy.ansible.com/buluma/molecule)|[![downloads](https://img.shields.io/ansible/role/d/57954)](https://galaxy.ansible.com/buluma/molecule)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-molecule.svg)](https://github.com/buluma/ansible-role-molecule/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-molecule.svg)](https://github.com/buluma/ansible-role-molecule/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-molecule.svg)](https://github.com/buluma/ansible-role-molecule/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-molecule/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-molecule/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-molecule/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-molecule)|[![downloads](https://img.shields.io/ansible/role/d/4768)](https://galaxy.ansible.com/buluma/molecule)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-molecule.svg)](https://github.com/buluma/ansible-role-molecule/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-molecule.svg)](https://github.com/buluma/ansible-role-molecule/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-molecule.svg)](https://github.com/buluma/ansible-role-molecule/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
