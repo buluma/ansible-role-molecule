@@ -1,5 +1,18 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-molecule/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-molecule/compare/1.0.8...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#11](https://github.com/buluma/ansible-role-molecule/issues/11)
+- Update action [\#10](https://github.com/buluma/ansible-role-molecule/issues/10)
+
+**Merged pull requests:**
+
+- Bump buluma/gitlab-mirror-ci-action from 1.0.6 to 1.0.7 [\#9](https://github.com/buluma/ansible-role-molecule/pull/9) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [1.0.8](https://github.com/buluma/ansible-role-molecule/tree/1.0.8) (2022-05-17)
 
 [Full Changelog](https://github.com/buluma/ansible-role-molecule/compare/1.0.7...1.0.8)
