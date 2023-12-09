@@ -51,6 +51,10 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 # example:
 # molecule_extra_args: "--user"
 molecule_extra_args: ""
+
+# A list of plugins to install. (Can be empty.)
+molecule_plugins:
+  - molecule-plugins[docker]
 ```
 
 ## [Requirements](#requirements)
@@ -83,9 +87,8 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |container|tags|
 |---------|----|
 |[Alpine](https://hub.docker.com/repository/docker/buluma/alpine/general)|all|
-|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|8|
+|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|9|
 |[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
-|[opensuse](https://hub.docker.com/repository/docker/buluma/opensuse/general)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done to:
 

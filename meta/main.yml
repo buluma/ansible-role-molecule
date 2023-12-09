@@ -13,15 +13,13 @@ galaxy_info:
         - all
     - name: EL
       versions:
-        - "8"
+        - "9"
     - name: Fedora
-      versions:
-        - all
-    - name: opensuse
       versions:
         - all
 
   galaxy_tags:
     - molecule
+    - development
 
 dependencies: []

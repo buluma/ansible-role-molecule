@@ -46,12 +46,10 @@ jobs:
           - image: "alpine-openrc"
             tag: "latest"
           - image: "enterpriselinux"
-            tag: "8"
+            tag: "latest"
           - image: "fedora-systemd"
             tag: "37"
           - image: "fedora-systemd"
-            tag: "latest"
-          - image: "docker-opensuse-systemd"
             tag: "latest"
     steps:
       - name: checkout
