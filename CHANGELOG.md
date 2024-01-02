@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/buluma/ansible-role-molecule/tree/HEAD)
 
-[Full Changelog](https://github.com/buluma/ansible-role-molecule/compare/1.0.8...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-molecule/compare/1.0.9...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#17](https://github.com/buluma/ansible-role-molecule/issues/17)
+
+## [1.0.9](https://github.com/buluma/ansible-role-molecule/tree/1.0.9) (2023-12-28)
+
+[Full Changelog](https://github.com/buluma/ansible-role-molecule/compare/1.0.8...1.0.9)
 
 **Closed issues:**
 
