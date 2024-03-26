@@ -46,15 +46,19 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - image: "alpine-openrc"
-            tag: "latest"
+          - image: "docker-molecule-images"
+            tag: "alpine-openrc"
           - image: "enterpriselinux"
             tag: "latest"
-          - image: "fedora-systemd"
+          - image: "docker-molecule-images"
+            tag: "37"
+          - image: "docker-molecule-images"
             tag: "38"
-          - image: "fedora-systemd"
-            tag: "latest"
-          - image: "fedora-systemd"
+          - image: "docker-molecule-images"
+            tag: "39"
+          - image: "docker-molecule-images"
+            tag: "40"
+          - image: "docker-molecule-images"
             tag: "rawhide"
     steps:
       - name: Checkout Role
@@ -66,6 +70,8 @@ jobs:
         with:
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}
+      - name: Running Role Test
+        run: ansible-galaxy role import --api-key ${{ secrets.galaxy_api_key }} buluma ${{ github.event.repository.name }}
 
   dependabot:
     needs:
