@@ -16,6 +16,17 @@ galaxy_info:
         - "9"
     - name: Fedora
       versions:
+        - "38"
+        - "39"
+        - "40"
+    - name: opensuse
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
         - all
 
   galaxy_tags:
