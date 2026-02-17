@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-molecule/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-molecule/compare/24.3.31...HEAD)
+
+**Closed issues:**
+
+- Update action [\#16](https://github.com/buluma/ansible-role-molecule/issues/16)
+- rebuild action [\#15](https://github.com/buluma/ansible-role-molecule/issues/15)
+
 ## [24.3.31](https://github.com/buluma/ansible-role-molecule/tree/24.3.31) (2024-03-29)
 
 [Full Changelog](https://github.com/buluma/ansible-role-molecule/compare/1.2.0...24.3.31)
