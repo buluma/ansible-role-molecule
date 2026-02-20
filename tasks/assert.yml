@@ -1,5 +1,4 @@
 ---
-
 - name: assert | Test molecule_extra_args
   ansible.builtin.assert:
     that:
