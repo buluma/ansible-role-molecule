@@ -86,7 +86,7 @@ molecule_extra_args: ""
 
 # A list of plugins to install. (Can be empty.)
 molecule_plugins:
-- molecule-plugins[docker]
+  - molecule-plugins[docker]
 ```
 
 ## [Requirements](#requirements)
