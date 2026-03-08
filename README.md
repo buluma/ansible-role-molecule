@@ -121,7 +121,6 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 |[Alpine](https://hub.docker.com/r/robertdebock/alpine)|all|
 |[EL](https://hub.docker.com/r/robertdebock/enterpriselinux)|all|
 |[Fedora](https://hub.docker.com/r/robertdebock/fedora)|all|
-|[opensuse](https://hub.docker.com/r/robertdebock/opensuse)|all|
 |[Ubuntu](https://hub.docker.com/r/robertdebock/ubuntu)|all|
 |[Debian](https://hub.docker.com/r/robertdebock/debian)|all|
 
@@ -140,3 +139,4 @@ If you find issues, please register them on [GitHub](https://github.com/buluma/a
 ## [Author Information](#author-information)
 
 [buluma](https://buluma.github.io/)
+
