@@ -9,6 +9,10 @@
 - Update action [\#16](https://github.com/buluma/ansible-role-molecule/issues/16)
 - rebuild action [\#15](https://github.com/buluma/ansible-role-molecule/issues/15)
 
+**Merged pull requests:**
+
+- Bump docker/setup-buildx-action from 3 to 4 [\#32](https://github.com/buluma/ansible-role-molecule/pull/32) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [24.3.31](https://github.com/buluma/ansible-role-molecule/tree/24.3.31) (2024-03-29)
 
 [Full Changelog](https://github.com/buluma/ansible-role-molecule/compare/1.2.0...24.3.31)
