@@ -15,3 +15,8 @@ _molecule_requirements:
     - ansible
 
 molecule_requirements: "{{ _molecule_requirements[ansible_facts['os_family']] | default(_molecule_requirements['default']) }}"
+
+molecule_break_system_packages: "{{ (ansible_facts['os_family'] == 'Debian' and (
+    (ansible_facts['distribution'] == 'Ubuntu' and ansible_facts['distribution_major_version'] | int >= 24) or
+    (ansible_facts['distribution'] == 'Debian' and ansible_facts['distribution_major_version'] | int >= 12)
+  )) | bool }}"

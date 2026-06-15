@@ -17,6 +17,7 @@
   ansible.builtin.pip:
     name: molecule
     extra_args: "{{ molecule_extra_args | default(omit) }}"
+    break_system_packages: "{{ molecule_break_system_packages }}"
 
 # - name: Install ansible-core (pip)
 #   ansible.builtin.pip:
@@ -27,3 +28,4 @@
   ansible.builtin.pip:
     name: "{{ molecule_plugins }}"
     extra_args: "{{ molecule_extra_args | default(omit) }}"
+    break_system_packages: "{{ molecule_break_system_packages }}"
