@@ -22,6 +22,9 @@ galaxy_info:
     - name: Debian
       versions:
         - all
+    - name: Suse
+      versions:
+        - all
   galaxy_tags:
     - molecule
     - development
