@@ -20,7 +20,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   pre_tasks:
     - name: Update apt cache.
       apt: update_cache=yes cache_valid_time=600
-      when: ansible_os_family == 'Debian'
+      when: ansible_facts['os_family'] == 'Debian'
       changed_when: false
 
     - name: Check if python3.11 EXTERNALLY-MANAGED file exists
@@ -62,11 +62,41 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
   become: true
   gather_facts: false
 
+  pre_tasks:
+    - name: Install sudo if missing
+      ansible.builtin.raw: "{{ ansible_pkg_mgr | default('dnf') }} install -y sudo"
+      become: false
+      changed_when: false
+      failed_when: false
+
   roles:
     - role: buluma.bootstrap
     - role: buluma.buildtools
     - role: buluma.epel
-    - role: buluma.python_pip
+  tasks:
+    - name: Find EXTERNALLY-MANAGED files
+      ansible.builtin.find:
+        paths:
+          - /usr/lib
+          - /usr/local/lib
+        patterns:
+          - "EXTERNALLY-MANAGED"
+        recurse: true
+        file_type: file
+      register: externally_managed_files
+    - name: Rename EXTERNALLY-MANAGED files
+      ansible.builtin.command:
+        cmd: "mv {{ item.path }} {{ item.path }}.old"
+      loop: "{{ externally_managed_files.files }}"
+      loop_control:
+        label: "{{ item.path }}"
+      when: externally_managed_files.matched > 0
+      args:
+        creates: "{{ item.path }}.old"
+      changed_when: true
+    - name: Install python_pip role
+      ansible.builtin.import_role:
+        name: buluma.python_pip
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -114,15 +144,14 @@ Here is an overview of related roles:
 
 ## [Compatibility](#compatibility)
 
-This role has been tested on these [container images](https://hub.docker.com/u/robertdebock):
+This role has been tested on these [container images](https://hub.docker.com/u/buluma):
 
 |container|tags|
 |---------|----|
-|[Alpine](https://hub.docker.com/r/robertdebock/alpine)|all|
-|[EL](https://hub.docker.com/r/robertdebock/enterpriselinux)|all|
-|[Fedora](https://hub.docker.com/r/robertdebock/fedora)|all|
-|[Ubuntu](https://hub.docker.com/r/robertdebock/ubuntu)|all|
-|[Debian](https://hub.docker.com/r/robertdebock/debian)|all|
+|[EL](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
+|[Debian](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
+|[Fedora](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
+|[Ubuntu](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done on:
 
@@ -140,6 +169,3 @@ If you find issues, please register them on [GitHub](https://github.com/buluma/a
 
 [buluma](https://buluma.github.io/)
 
-### Get Help
-- Report issues: https://github.com/buluma/ansible-role-molecule/issues/new
-- See docs: https://docs.ansible.com/collection/gallery/ansible-role-molecule
