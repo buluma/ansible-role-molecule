@@ -24,3 +24,19 @@
     name: "{{ molecule_plugins }}"
     extra_args: "{{ molecule_extra_args | default(omit) }}"
     break_system_packages: "{{ molecule_break_system_packages }}"
+
+- name: Ensure a Python 3.13+-compatible ansible-core is installed
+  when:
+    - ansible_facts['python_version'] is version('3.13', '>=')
+  block:
+    - name: Install ansible-core (pip)
+      ansible.builtin.pip:
+        name: "ansible-core>=2.20.0"
+        extra_args: "{{ molecule_extra_args | default(omit) }}"
+        break_system_packages: "{{ molecule_break_system_packages }}"
+  rescue:
+    - name: Force-reinstall ansible-core (pip)
+      ansible.builtin.pip:
+        name: "ansible-core>=2.20.0"
+        extra_args: "--ignore-installed {{ molecule_extra_args }}"
+        break_system_packages: "{{ molecule_break_system_packages }}"
