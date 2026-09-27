@@ -9,7 +9,8 @@ _molecule_requirements:
   RedHat:
     - python3-devel
     - openssl-devel
-    - ansible-core
+    # Molecule's pip dependencies provide ansible-core. Installing the RPM
+    # first can leave pip unable to replace it when resolving a newer version.
   Suse:
     - python3-devel
     - ansible
